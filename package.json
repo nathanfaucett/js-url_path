@@ -1,0 +1,26 @@
+{
+  "name": "url_path",
+  "version": "0.0.1",
+  "description": "url/(forward slash path) path utils for the browser and node.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathanfaucett/url_path.git"
+  },
+  "main": "src/index.js",
+  "keywords": [
+    "url_path",
+    "url_path.js"
+  ],
+  "author": "Nathan Faucett",
+  "license": "BSD-2-Clause",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grunt": "",
+    "grunt-jsbeautifier": ""
+  },
+  "dependencies": {
+    "path_utils": "git://github.com/nathanfaucett/path_utils",
+    "utils": "git://github.com/nathanfaucett/utils"
+  }
+}
+
