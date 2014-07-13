@@ -19,8 +19,8 @@
     "grunt-jsbeautifier": ""
   },
   "dependencies": {
-    "path_utils": "git://github.com/nathanfaucett/path_utils",
-    "utils": "git://github.com/nathanfaucett/utils"
+    "path_utils": "nathanfaucett/path_utils",
+    "utils": "nathanfaucett/utils"
   }
 }
 
