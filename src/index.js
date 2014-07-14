@@ -5,8 +5,7 @@ var utils = require("utils"),
 var urlPath = module.exports,
 
     SPLITER = /[\/]+/,
-    IS_URL = /^(?:[a-z]+:)?\/\//i,
-    NORMALIZE_URL = /(^(?:[a-z]+:)?\/\/)(.*)/i;
+    IS_URL = /^(?:[a-z]+:)?\/\//i;
 
 
 urlPath.isAbsolute = function(str) {
@@ -18,11 +17,9 @@ urlPath.isAbsoluteURL = function(str) {
 };
 
 urlPath.normalize = function(str) {
-    var paths = NORMALIZE_URL.exec(str),
-        isUrl = paths ? !!paths[1] : false,
-        isAbs = isUrl || str.charAt(0) === "/",
+    var isAbs = urlPath.isAbsolute(str),
         trailingSlash = str[str.length - 1] === "/",
-        segments = isUrl ? paths[2].split(SPLITER) : str.split(SPLITER),
+        segments = str.split("/"),
         nonEmptySegments = [],
         i;
 
@@ -34,7 +31,7 @@ urlPath.normalize = function(str) {
     if (!str && !isAbs) str = ".";
     if (str && trailingSlash) str += "/";
 
-    return (isAbs ? (isUrl ? paths[1] : "/") : "") + str;
+    return (isAbs ? "/" : "") + str;
 };
 
 urlPath.resolve = function() {
