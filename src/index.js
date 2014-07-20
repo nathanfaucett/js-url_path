@@ -40,7 +40,7 @@ urlPath.resolve = function() {
         i, str;
 
     for (i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
-        str = (i >= 0) ? arguments[i] : cwd;
+        str = (i >= 0) ? arguments[i] : process.cwd();
 
         if (!utils.isString(str)) {
             throw new TypeError("Arguments to resolve must be strings");
