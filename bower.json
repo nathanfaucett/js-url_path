@@ -18,7 +18,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "path_utils": "nathanfaucett/path_utils",
-    "utils": "nathanfaucett/utils"
+    "path_utils": "nathanfaucett/path_utils"
   }
 }

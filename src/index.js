@@ -1,5 +1,4 @@
-var utils = require("utils"),
-    pathUtils = require("path_utils");
+var pathUtils = require("path_utils");
 
 
 var urlPath = module.exports,
@@ -42,7 +41,7 @@ urlPath.resolve = function() {
     for (i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
         str = (i >= 0) ? arguments[i] : process.cwd();
 
-        if (!utils.isString(str)) {
+        if (typeof(str) !== "string") {
             throw new TypeError("Arguments to resolve must be strings");
         } else if (!str) {
             continue;
@@ -89,7 +88,7 @@ urlPath.join = function() {
     for (i = 0, il = arguments.length; i < il; i++) {
         segment = arguments[i];
 
-        if (!utils.isString(segment)) {
+        if (typeof(segment) !== "string") {
             throw new TypeError("Arguments to join must be strings");
         }
         if (segment) {
@@ -109,6 +108,8 @@ urlPath.dir = function(str) {
     return str ? str.substr(0, str.length - 1) : ".";
 };
 
+urlPath.dirname = urlPath.dir;
+
 urlPath.base = function(str, ext) {
     str = str.substring(str.lastIndexOf("/") + 1);
 
@@ -119,7 +120,11 @@ urlPath.base = function(str, ext) {
     return str || "";
 };
 
+urlPath.basename = urlPath.base;
+
 urlPath.ext = function(str) {
     var index = str.lastIndexOf(".");
     return index > -1 ? str.substring(index) : "";
 };
+
+urlPath.extname = urlPath.ext;
