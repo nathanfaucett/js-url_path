@@ -15,6 +15,8 @@ urlPath.isAbsoluteURL = function(str) {
     return IS_URL.test(str);
 };
 
+urlPath.isURL = urlPath.isAbsoluteURL;
+
 urlPath.normalize = function(str) {
     var isAbs = urlPath.isAbsolute(str),
         trailingSlash = str[str.length - 1] === "/",
