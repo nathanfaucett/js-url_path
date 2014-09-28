@@ -2,8 +2,6 @@ var pathUtils = require("path_utils");
 
 
 var urlPath = module.exports,
-
-    SPLITER = /[\/]+/,
     IS_URL = /^(?:[a-z]+:)?\/\//i;
 
 
