@@ -56,8 +56,8 @@ urlPath.resolve = function() {
 };
 
 urlPath.relative = function(from, to) {
-    from = resolve(from).substr(1);
-    to = resolve(to).substr(1);
+    from = urlPath.resolve(from).substr(1);
+    to = urlPath.resolve(to).substr(1);
 
     var fromParts = pathUtils.trim(from.split("/")),
         toParts = pathUtils.trim(to.split("/")),
