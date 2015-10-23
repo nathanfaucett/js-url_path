@@ -23,12 +23,18 @@ urlPath.normalize = function(str) {
         i;
 
     for (i = 0; i < segments.length; i++) {
-        if (segments[i]) nonEmptySegments.push(segments[i]);
+        if (segments[i]) {
+            nonEmptySegments.push(segments[i]);
+        }
     }
     str = pathUtils.normalizeArray(nonEmptySegments, !isAbs).join("/");
 
-    if (!str && !isAbs) str = ".";
-    if (str && trailingSlash) str += "/";
+    if (!str && !isAbs) {
+        str = ".";
+    }
+    if (str && trailingSlash) {
+        str += "/";
+    }
 
     return (isAbs ? "/" : "") + str;
 };
@@ -74,7 +80,9 @@ urlPath.relative = function(from, to) {
     }
 
     outputParts = [];
-    for (i = samePartsLength, il = fromParts.length; i < il; i++) outputParts.push("..");
+    for (i = samePartsLength, il = fromParts.length; i < il; i++) {
+        outputParts.push("..");
+    }
     outputParts = outputParts.concat(toParts.slice(samePartsLength));
 
     return outputParts.join("/");
