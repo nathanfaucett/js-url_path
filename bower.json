@@ -1,5 +1,5 @@
 {
-  "name": "url_path",
+  "name": "@nathanfaucett/url_path",
   "version": "0.0.1",
   "homepage": "https://github.com/nathanfaucett/url_path",
   "authors": [
@@ -18,6 +18,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "path_utils": "nathanfaucett/path_utils"
+    "@nathanfaucett/path_utils": "^0.0.1"
   }
 }

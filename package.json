@@ -1,5 +1,5 @@
 {
-  "name": "url_path",
+  "name": "@nathanfaucett/url_path",
   "version": "0.0.1",
   "description": "url/(forward slash path) path utils for the browser and node.js",
   "repository": {
@@ -15,11 +15,11 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.11.3",
-    "grunt-jsbeautifier": "^0.2.10"
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-jsbeautifier": "^0.2.13"
   },
   "dependencies": {
-    "path_utils": "git://github.com/nathanfaucett/path_utils.git"
+    "@nathanfaucett/path_utils": "^0.0.1"
   }
 }

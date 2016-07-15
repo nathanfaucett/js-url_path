@@ -1,4 +1,4 @@
-var pathUtils = require("path_utils");
+var pathUtils = require("@nathanfaucett/path_utils");
 
 
 var urlPath = module.exports,
